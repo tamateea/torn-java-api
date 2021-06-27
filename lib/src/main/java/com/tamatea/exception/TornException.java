@@ -1,13 +1,17 @@
 package com.tamatea.exception;
 
 
-import com.tamatea.ReturnCode;
-
 public class TornException extends Exception {
     private static final long serialVersionUID = 2L;
 
 
-    transient ReturnCode returnCode;
+    transient APIError APIError;
+
+    public TornException(APIError APIError) {
+        this.APIError = APIError;
+    }
+
+
 
     /**
      * Returns a description of the exception, including the HTTP status code and request ID (if
@@ -17,7 +21,7 @@ public class TornException extends Exception {
      */
     @Override
     public String getMessage() {
-        String additionalInfo = "; message: "+returnCode.getMessage();
+        String additionalInfo = "; message: "+ APIError.getMessage();
         return super.getMessage() + additionalInfo;
     }
 }
