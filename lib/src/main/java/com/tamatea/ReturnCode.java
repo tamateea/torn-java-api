@@ -21,11 +21,11 @@ public enum ReturnCode {
 
     private final int returnCode;
 
-    private final String value;
+    private final String message;
 
-    ReturnCode(int returnCode, String value) {
+    ReturnCode(int returnCode, String message) {
         this.returnCode = returnCode;
-        this.value = value;
+        this.message = message;
     }
 
 
@@ -33,8 +33,8 @@ public enum ReturnCode {
         return returnCode;
     }
 
-    public String getValue() {
-        return value;
+    public String getMessage() {
+        return message;
     }
 
     public ReturnCode of(int returnCode) {
