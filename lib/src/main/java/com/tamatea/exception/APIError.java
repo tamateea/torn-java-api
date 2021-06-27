@@ -1,6 +1,6 @@
-package com.tamatea;
+package com.tamatea.exception;
 
-public enum ReturnCode {
+public enum APIError {
 
 
     UNKNOWN_ERROR(0, "Unhandled error, should not occur."),
@@ -23,7 +23,7 @@ public enum ReturnCode {
 
     private final String message;
 
-    ReturnCode(int returnCode, String message) {
+    APIError(int returnCode, String message) {
         this.returnCode = returnCode;
         this.message = message;
     }
@@ -37,13 +37,13 @@ public enum ReturnCode {
         return message;
     }
 
-    public ReturnCode of(int returnCode) {
-        for (ReturnCode code : VALUES) {
+    public APIError of(int returnCode) {
+        for (APIError code : VALUES) {
             if(code.returnCode == returnCode)
                 return code;
         }
         return null;
     }
 
-    public static final ReturnCode[] VALUES = values();
+    public static final APIError[] VALUES = values();
 }
