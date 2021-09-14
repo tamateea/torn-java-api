@@ -14,10 +14,10 @@ public class BattleStats extends Selection<User> {
     int defense_modifier;
     int speed_modifier;
     int dexterity_modifier;
-    String[] strength_info;//this is bad
-    String[] defense_info;//this is bad
-    String[] speed_info;//this is bad
-    String[] dexterity_info;//this is bad
+    String[] strength_info;//todo this is bad
+    String[] defense_info;//todo this is bad
+    String[] speed_info;//todo this is bad
+    String[] dexterity_info;//todo this is bad
 
     @Override
     public String selectionName() {

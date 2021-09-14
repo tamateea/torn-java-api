@@ -1,13 +1,6 @@
-package com.tamatea.model.selection.impl.player;
+package com.tamatea.model.entity.objects;
 
-import com.tamatea.model.entity.impl.user.User;
-import com.tamatea.model.entity.objects.AttackModifier;
-import com.tamatea.model.entity.objects.AttackType;
-import com.tamatea.model.selection.Selection;
-
-//these are retrieved as a map<Integer, Attack>
-public class Attack extends Selection<User> {
-
+public class Attack {
     String code;
     long timestamp_start;
     long timestamp_ended;
@@ -28,8 +21,4 @@ public class Attack extends Selection<User> {
     double respect_loss;
     AttackModifier modifiers;
 
-    @Override
-    public String selectionName() {
-        return "attacks";
-    }
 }
