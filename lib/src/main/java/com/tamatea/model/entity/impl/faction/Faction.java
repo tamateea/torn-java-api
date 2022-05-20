@@ -14,7 +14,7 @@ public class Faction implements Entity {
     int respect;
     int age;
     int capacity;
-    int best_cain;
+    int best_chain;
     TerritoryWar[] territory_wars;
     RaidWar[] raid_wars;
     FactionPeace[] peace;
